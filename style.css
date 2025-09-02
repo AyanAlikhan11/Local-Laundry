@@ -1,0 +1,220 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+body {
+    line-height: 1.6;
+    color: #333;
+    background: #fff;
+    transition: background 0.4s, color 0.4s;
+}
+
+/* Dark Mode Toggle Button */
+#dark-toggle {
+    display: none;
+}
+.toggle-label {
+    position: fixed;
+    top: 15px;
+    right: 20px;
+    background: #0a74da;
+    color: white;
+    font-size: 20px;
+    padding: 8px 12px;
+    border-radius: 20px;
+    cursor: pointer;
+    z-index: 999;
+    transition: background 0.3s;
+}
+.toggle-label:hover {
+    background: #084c9e;
+}
+
+/* Navbar */
+.navbar {
+    background: #0a74da;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 50px;
+    position: sticky;
+    top: 0;
+}
+.navbar .logo {
+    font-size: 22px;
+    font-weight: bold;
+}
+.navbar ul {
+    list-style: none;
+    display: flex;
+}
+.navbar ul li {
+    margin-left: 20px;
+}
+.navbar ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+.navbar ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Hero Section */
+.hero {
+    background: url('https://images.unsplash.com/photo-1581574208075-16a6b3a508c1?auto=format&fit=crop&w=1350&q=80') no-repeat center center/cover;
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+}
+.hero-content {
+    background: rgba(0,0,0,0.5);
+    padding: 30px;
+    border-radius: 10px;
+}
+.hero h1 {
+    font-size: 48px;
+    margin-bottom: 10px;
+}
+.hero p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #0a74da;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+.btn:hover {
+    background: #084c9e;
+}
+
+/* Services */
+.services {
+    padding: 50px 20px;
+    text-align: center;
+    background: #f9f9f9;
+    transition: background 0.4s, color 0.4s;
+}
+.services h2 {
+    margin-bottom: 30px;
+    font-size: 28px;
+}
+.service-cards {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+.card {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 250px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: background 0.4s, color 0.4s;
+}
+.card h3 {
+    margin-bottom: 10px;
+    color: #0a74da;
+}
+
+/* Contact */
+.contact {
+    padding: 50px 20px;
+    text-align: center;
+}
+.contact h2 {
+    margin-bottom: 20px;
+}
+.contact form {
+    max-width: 500px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.contact input, .contact textarea {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+    font-size: 16px;
+}
+.contact textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+.contact button {
+    padding: 12px;
+    background: #0a74da;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background 0.3s;
+}
+.contact button:hover {
+    background: #084c9e;
+}
+.form-note {
+    margin-top: 10px;
+    font-size: 14px;
+    color: gray;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    .contact form {
+        width: 90%;
+    }
+}
+
+
+/* Footer */
+.footer {
+    background: #0a74da;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: 20px;
+    transition: background 0.4s, color 0.4s;
+}
+
+/* ---------------- DARK MODE ---------------- */
+#dark-toggle:checked ~ .navbar {
+    background: #111;
+}
+#dark-toggle:checked ~ .hero {
+    background: url('https://images.unsplash.com/photo-1581574208075-16a6b3a508c1?auto=format&fit=crop&w=1350&q=80') no-repeat center center/cover;
+}
+#dark-toggle:checked ~ .services {
+    background: #222;
+    color: #eee;
+}
+#dark-toggle:checked ~ .services .card {
+    background: #333;
+    color: #eee;
+}
+#dark-toggle:checked ~ .contact {
+    background: #111;
+    color: #eee;
+}
+#dark-toggle:checked ~ .footer {
+    background: #111;
+    color: #eee;
+}
+#dark-toggle:checked ~ body {
+    background: #111;
+    color: #eee;
+}

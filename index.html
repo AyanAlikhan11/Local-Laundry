@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fresh & Clean Laundry</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Dark Mode Toggle -->
+    <input type="checkbox" id="dark-toggle">
+    <label for="dark-toggle" class="toggle-label"> 🌙</label>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="logo">Fresh & Clean</div>
+        <ul class="nav-links">
+            <li><a href="#hero">Home</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero">
+        <div class="hero-content">
+            <h1>Fresh Clothes, Happy Life</h1>
+            <p>Your trusted neighborhood laundry service.</p>
+            <a href="#services" class="btn">View Services</a>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <h2>Our Services</h2>
+        <div class="service-cards">
+            <div class="card">
+                <h3>Wash & Fold</h3>
+                <p>Quick and professional wash & fold service for daily wear.</p>
+            </div>
+            <div class="card">
+                <h3>Dry Cleaning</h3>
+                <p>Keep your formal clothes spotless with our dry cleaning.</p>
+            </div>
+            <div class="card">
+                <h3>Ironing</h3>
+                <p>Perfectly pressed clothes for every occasion.</p>
+            </div>
+        </div>
+    </section>
+
+   <!-- Contact Form -->
+<section id="contact" class="contact">
+    <h2>Contact Us</h2>
+    <form action="https://formspree.io/f/mqadbyvy" method="POST">
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="_replyto" placeholder="Your Email" required>
+        <textarea name="message" placeholder="Your Message" required></textarea>
+        <button type="submit">Send Message</button>
+    </form>
+    <p class="form-note">✅ You’ll receive a confirmation email once we get your message!</p>
+</section>
+
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>© 2025 Fresh & Clean Laundry | All Rights Reserved</p>
+    </footer>
+</body>
+</html>
